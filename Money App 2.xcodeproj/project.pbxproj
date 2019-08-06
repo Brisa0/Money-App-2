@@ -12,6 +12,10 @@
 		DA36DE1B22EA1143005452F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA36DE1922EA1143005452F2 /* Main.storyboard */; };
 		DA36DE1D22EA1144005452F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA36DE1C22EA1144005452F2 /* Assets.xcassets */; };
 		DA36DE2022EA1144005452F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA36DE1E22EA1144005452F2 /* LaunchScreen.storyboard */; };
+		DD63CF7322F9E4E500B10239 /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7222F9E4E500B10239 /* SignUpPageViewController.swift */; };
+		DD63CF7522F9EED100B10239 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7422F9EED100B10239 /* ForgotPasswordViewController.swift */; };
+		DD63CF7722F9F21A00B10239 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7622F9F21A00B10239 /* NewPasswordViewController.swift */; };
+		DD63CF7922F9F53100B10239 /* CashTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7822F9F53100B10239 /* CashTotalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		DA36DE1C22EA1144005452F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA36DE1F22EA1144005452F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA36DE2122EA1144005452F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD63CF7222F9E4E500B10239 /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageViewController.swift; sourceTree = "<group>"; };
+		DD63CF7422F9EED100B10239 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		DD63CF7622F9F21A00B10239 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		DD63CF7822F9F53100B10239 /* CashTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTotalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,10 @@
 				DA36DE1522EA1143005452F2 /* AppDelegate.swift */,
 				DA36DE1722EA1143005452F2 /* ViewController.swift */,
 				DA36DE1922EA1143005452F2 /* Main.storyboard */,
+				DD63CF7822F9F53100B10239 /* CashTotalViewController.swift */,
+				DD63CF7622F9F21A00B10239 /* NewPasswordViewController.swift */,
+				DD63CF7422F9EED100B10239 /* ForgotPasswordViewController.swift */,
+				DD63CF7222F9E4E500B10239 /* SignUpPageViewController.swift */,
 				DA36DE1C22EA1144005452F2 /* Assets.xcassets */,
 				DA36DE1E22EA1144005452F2 /* LaunchScreen.storyboard */,
 				DA36DE2122EA1144005452F2 /* Info.plist */,
@@ -135,7 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD63CF7522F9EED100B10239 /* ForgotPasswordViewController.swift in Sources */,
+				DD63CF7322F9E4E500B10239 /* SignUpPageViewController.swift in Sources */,
 				DA36DE1822EA1143005452F2 /* ViewController.swift in Sources */,
+				DD63CF7722F9F21A00B10239 /* NewPasswordViewController.swift in Sources */,
+				DD63CF7922F9F53100B10239 /* CashTotalViewController.swift in Sources */,
 				DA36DE1622EA1143005452F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
