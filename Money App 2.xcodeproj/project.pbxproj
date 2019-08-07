@@ -16,6 +16,16 @@
 		DD63CF7522F9EED100B10239 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7422F9EED100B10239 /* ForgotPasswordViewController.swift */; };
 		DD63CF7722F9F21A00B10239 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7622F9F21A00B10239 /* NewPasswordViewController.swift */; };
 		DD63CF7922F9F53100B10239 /* CashTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7822F9F53100B10239 /* CashTotalViewController.swift */; };
+		DD63CF7B22FA153D00B10239 /* CashOrCreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7A22FA153D00B10239 /* CashOrCreditViewController.swift */; };
+		DD63CF7D22FA170500B10239 /* UrgentNeedssViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7C22FA170500B10239 /* UrgentNeedssViewController.swift */; };
+		DD63CF7F22FB0A0200B10239 /* TotalSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF7E22FB0A0200B10239 /* TotalSummaryViewController.swift */; };
+		DD63CF8122FB0CE300B10239 /* MyWishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF8022FB0CE300B10239 /* MyWishListViewController.swift */; };
+		DD63CF8322FB0DBA00B10239 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63CF8222FB0DBA00B10239 /* SettingsViewController.swift */; };
+		DDADF45422FB1518003DFB3B /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDADF45322FB1518003DFB3B /* LanguagesViewController.swift */; };
+		DDADF45622FB191E003DFB3B /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDADF45522FB191E003DFB3B /* TermsAndConditionsViewController.swift */; };
+		DDADF45822FB1AE9003DFB3B /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDADF45722FB1AE9003DFB3B /* MyProfileViewController.swift */; };
+		DDADF45A22FB1D86003DFB3B /* WeeklySpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDADF45922FB1D86003DFB3B /* WeeklySpendingViewController.swift */; };
+		DDADF45C22FB1F50003DFB3B /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDADF45B22FB1F50003DFB3B /* MainScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +40,16 @@
 		DD63CF7422F9EED100B10239 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		DD63CF7622F9F21A00B10239 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		DD63CF7822F9F53100B10239 /* CashTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTotalViewController.swift; sourceTree = "<group>"; };
+		DD63CF7A22FA153D00B10239 /* CashOrCreditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashOrCreditViewController.swift; sourceTree = "<group>"; };
+		DD63CF7C22FA170500B10239 /* UrgentNeedssViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrgentNeedssViewController.swift; sourceTree = "<group>"; };
+		DD63CF7E22FB0A0200B10239 /* TotalSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSummaryViewController.swift; sourceTree = "<group>"; };
+		DD63CF8022FB0CE300B10239 /* MyWishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishListViewController.swift; sourceTree = "<group>"; };
+		DD63CF8222FB0DBA00B10239 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DDADF45322FB1518003DFB3B /* LanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
+		DDADF45522FB191E003DFB3B /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		DDADF45722FB1AE9003DFB3B /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		DDADF45922FB1D86003DFB3B /* WeeklySpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySpendingViewController.swift; sourceTree = "<group>"; };
+		DDADF45B22FB1F50003DFB3B /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +83,18 @@
 			isa = PBXGroup;
 			children = (
 				DA36DE1522EA1143005452F2 /* AppDelegate.swift */,
+				DD63CF7C22FA170500B10239 /* UrgentNeedssViewController.swift */,
 				DA36DE1722EA1143005452F2 /* ViewController.swift */,
 				DA36DE1922EA1143005452F2 /* Main.storyboard */,
+				DDADF45B22FB1F50003DFB3B /* MainScreenViewController.swift */,
+				DDADF45922FB1D86003DFB3B /* WeeklySpendingViewController.swift */,
+				DDADF45722FB1AE9003DFB3B /* MyProfileViewController.swift */,
+				DDADF45522FB191E003DFB3B /* TermsAndConditionsViewController.swift */,
+				DDADF45322FB1518003DFB3B /* LanguagesViewController.swift */,
+				DD63CF8222FB0DBA00B10239 /* SettingsViewController.swift */,
+				DD63CF8022FB0CE300B10239 /* MyWishListViewController.swift */,
+				DD63CF7E22FB0A0200B10239 /* TotalSummaryViewController.swift */,
+				DD63CF7A22FA153D00B10239 /* CashOrCreditViewController.swift */,
 				DD63CF7822F9F53100B10239 /* CashTotalViewController.swift */,
 				DD63CF7622F9F21A00B10239 /* NewPasswordViewController.swift */,
 				DD63CF7422F9EED100B10239 /* ForgotPasswordViewController.swift */,
@@ -148,11 +178,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD63CF7522F9EED100B10239 /* ForgotPasswordViewController.swift in Sources */,
+				DD63CF7F22FB0A0200B10239 /* TotalSummaryViewController.swift in Sources */,
+				DDADF45822FB1AE9003DFB3B /* MyProfileViewController.swift in Sources */,
+				DDADF45422FB1518003DFB3B /* LanguagesViewController.swift in Sources */,
+				DD63CF8322FB0DBA00B10239 /* SettingsViewController.swift in Sources */,
 				DD63CF7322F9E4E500B10239 /* SignUpPageViewController.swift in Sources */,
+				DD63CF7D22FA170500B10239 /* UrgentNeedssViewController.swift in Sources */,
 				DA36DE1822EA1143005452F2 /* ViewController.swift in Sources */,
+				DDADF45622FB191E003DFB3B /* TermsAndConditionsViewController.swift in Sources */,
+				DD63CF8122FB0CE300B10239 /* MyWishListViewController.swift in Sources */,
 				DD63CF7722F9F21A00B10239 /* NewPasswordViewController.swift in Sources */,
 				DD63CF7922F9F53100B10239 /* CashTotalViewController.swift in Sources */,
+				DDADF45A22FB1D86003DFB3B /* WeeklySpendingViewController.swift in Sources */,
+				DDADF45C22FB1F50003DFB3B /* MainScreenViewController.swift in Sources */,
 				DA36DE1622EA1143005452F2 /* AppDelegate.swift in Sources */,
+				DD63CF7B22FA153D00B10239 /* CashOrCreditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

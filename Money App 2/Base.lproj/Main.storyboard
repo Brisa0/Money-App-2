@@ -210,6 +210,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="doneButtonPressed:" destination="YME-uO-wd0" eventType="touchUpInside" id="iZ2-fs-C1F"/>
                                     <segue destination="0eh-Ph-k9m" kind="show" id="uWP-tm-eWe"/>
                                 </connections>
                             </button>
@@ -249,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="2103" y="-732"/>
         </scene>
-        <!--View Controller-->
+        <!--Cash Or Credit View Controller-->
         <scene sceneID="PMg-eA-Bij">
             <objects>
-                <viewController id="VLS-3W-jwz" sceneMemberID="viewController">
+                <viewController id="VLS-3W-jwz" customClass="CashOrCreditViewController" customModule="Money_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4mR-Ad-Zus">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,6 +269,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="cardButton:" destination="VLS-3W-jwz" eventType="touchUpInside" id="nz5-Wg-RvK"/>
                                     <segue destination="r6T-ad-zrQ" kind="show" id="zuC-8o-s35"/>
                                 </connections>
                             </button>
@@ -279,6 +281,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="cashButton:" destination="VLS-3W-jwz" eventType="touchUpInside" id="aQB-K6-yjP"/>
                                     <segue destination="YME-uO-wd0" kind="show" id="AxC-Sc-3Xm"/>
                                 </connections>
                             </button>
@@ -291,6 +294,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i9z-I5-5xj"/>
                     </view>
+                    <connections>
+                        <outlet property="cardButton" destination="zA0-jo-ksK" id="0hy-ob-eVO"/>
+                        <outlet property="cashButton" destination="DPX-5l-0LX" id="i0H-Pm-gUc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCC-th-n4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,10 +410,10 @@
             </objects>
             <point key="canvasLocation" x="3583.1999999999998" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Total Summary View Controller-->
         <scene sceneID="4Pj-I0-OIk">
             <objects>
-                <viewController id="Pmf-aC-d53" sceneMemberID="viewController">
+                <viewController id="Pmf-aC-d53" customClass="TotalSummaryViewController" customModule="Money_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZGj-RO-iHM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -436,14 +443,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZK-WK-FAP">
-                                <rect key="frame" x="16" y="253" width="142" height="30"/>
+                                <rect key="frame" x="16" y="238" width="142" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l1Z-HY-9ON">
-                                <rect key="frame" x="16" y="307" width="142" height="30"/>
+                                <rect key="frame" x="16" y="301" width="142" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -526,16 +533,31 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="qUZ-uU-zxd"/>
+                    <connections>
+                        <outlet property="costLabel" destination="a9g-SJ-cRs" id="h0c-Qb-J91"/>
+                        <outlet property="costTextField1" destination="9Xt-Qo-fl6" id="qFR-cz-PEA"/>
+                        <outlet property="costTextField2" destination="Prh-JA-bLY" id="2ps-rJ-3zc"/>
+                        <outlet property="costTextField3" destination="r5P-ek-QSR" id="Nd5-ay-WI4"/>
+                        <outlet property="costTextField4" destination="2ep-E5-zPI" id="nYu-PN-9x6"/>
+                        <outlet property="itemNameLabel" destination="Zxu-24-XZb" id="WYz-Ps-n9a"/>
+                        <outlet property="itemTextField1" destination="pZK-WK-FAP" id="eWv-5P-99x"/>
+                        <outlet property="itemTextField2" destination="l1Z-HY-9ON" id="KB7-R4-81j"/>
+                        <outlet property="itemTextField3" destination="WGJ-Ul-e4i" id="7cE-Id-ll9"/>
+                        <outlet property="itemTextField4" destination="ETk-Zd-mLa" id="j2B-5u-Djx"/>
+                        <outlet property="totalSpentLabel" destination="8ej-1Q-zmx" id="E7u-XJ-no3"/>
+                        <outlet property="totalSpentTextField" destination="2uZ-Ov-EaR" id="I6c-X0-etC"/>
+                        <outlet property="totalSummaryLabel" destination="X8a-5t-UaX" id="WSS-A8-OYH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozo-xl-ecf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="M3A-vj-Kkx"/>
             </objects>
-            <point key="canvasLocation" x="4447.1999999999998" y="116.49175412293854"/>
+            <point key="canvasLocation" x="4454" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--My Wish List View Controller-->
         <scene sceneID="Jd1-kU-Jnv">
             <objects>
-                <viewController id="Da1-7f-VzO" sceneMemberID="viewController">
+                <viewController id="Da1-7f-VzO" customClass="MyWishListViewController" customModule="Money_App_2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9b8-z4-Z8Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -624,6 +646,7 @@
                                 <rect key="frame" x="189" y="639" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
+                                    <action selector="pageControl:" destination="Da1-7f-VzO" eventType="valueChanged" id="QIQ-dI-7pO"/>
                                     <segue destination="PdI-mU-Nha" kind="show" id="2Ty-JO-S7U"/>
                                 </connections>
                             </pageControl>
@@ -647,16 +670,31 @@
                             <outletCollection property="gestureRecognizers" destination="87R-Iz-qEm" appends="YES" id="2DI-bQ-ieW"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="checkListLabel" destination="puB-fD-E7A" id="jFJ-J9-Hhk"/>
+                        <outlet property="costLabel" destination="Z0J-Se-D7P" id="LFi-29-TKR"/>
+                        <outlet property="costTextField1" destination="UXm-jm-gAb" id="4be-UP-7KR"/>
+                        <outlet property="costTextField2" destination="iXz-aQ-Tmx" id="owK-AB-IqF"/>
+                        <outlet property="costTextField3" destination="9zJ-mP-yaQ" id="jYu-Ah-TGU"/>
+                        <outlet property="costTextField4" destination="j3j-fd-xDg" id="TA5-2m-Vws"/>
+                        <outlet property="itemNameLabel" destination="w7e-iU-esQ" id="zwD-iz-kjd"/>
+                        <outlet property="itemTextFIeld2" destination="v6x-wt-7Wq" id="nft-1C-9b5"/>
+                        <outlet property="itemTextField1" destination="cnH-hS-xaQ" id="TyO-97-UtV"/>
+                        <outlet property="itemTextField3" destination="HL5-VS-lhm" id="kuW-T8-pNF"/>
+                        <outlet property="itemTextField4" destination="lrs-1O-IBb" id="l2R-8O-em7"/>
+                        <outlet property="myWishListLabel" destination="xOf-Ok-NFN" id="uwI-48-lQq"/>
+                        <outlet property="pageControl" destination="eyw-Nm-Jln" id="zJr-if-pSz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXV-HB-gZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="87R-Iz-qEm"/>
             </objects>
-            <point key="canvasLocation" x="5167.1999999999998" y="116.49175412293854"/>
+            <point key="canvasLocation" x="5167" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="ZSi-RE-Dcr">
             <objects>
-                <viewController id="PdI-mU-Nha" sceneMemberID="viewController">
+                <viewController id="PdI-mU-Nha" customClass="SettingsViewController" customModule="Money_App_2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BOd-Xq-V34">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -671,6 +709,9 @@
                                 <state key="normal" title="Sign Out">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signOutButton:" destination="PdI-mU-Nha" eventType="touchUpInside" id="Crg-TV-kp9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIe-oR-Bdb">
                                 <rect key="frame" x="40" y="389" width="294" height="95"/>
@@ -680,6 +721,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="termsAndConditionsButton:" destination="PdI-mU-Nha" eventType="touchUpInside" id="4Uy-rh-KDd"/>
                                     <segue destination="Iun-Zc-cMe" kind="show" id="Hgu-Ws-jMt"/>
                                 </connections>
                             </button>
@@ -691,7 +733,8 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="khk-Xk-HBX" kind="show" id="qTy-I1-fv7"/>
+                                    <action selector="profileButton:" destination="PdI-mU-Nha" eventType="touchUpInside" id="6Pj-0h-yU6"/>
+                                    <segue destination="khk-Xk-HBX" kind="show" id="XK5-8h-fdx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bm1-rB-Yj5">
@@ -708,6 +751,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="languagesButton:" destination="PdI-mU-Nha" eventType="touchUpInside" id="F8L-nt-edy"/>
                                     <segue destination="s29-FX-W6e" kind="show" id="h7E-Ni-mWD"/>
                                 </connections>
                             </button>
@@ -726,16 +770,23 @@
                             <outletCollection property="gestureRecognizers" destination="gpp-MG-JHZ" appends="YES" id="nuh-sl-grv"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="languagesButton" destination="mYy-6e-jj4" id="XTk-mP-SCi"/>
+                        <outlet property="profileButton" destination="lEG-Dy-QAV" id="hkk-6y-Pbg"/>
+                        <outlet property="settingsLabel" destination="bm1-rB-Yj5" id="sdQ-0z-2cu"/>
+                        <outlet property="signOutButton" destination="qF1-Q8-fDo" id="aTM-P0-37T"/>
+                        <outlet property="termsAndConditionsButton" destination="XIe-oR-Bdb" id="kC7-CO-Vuh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mkc-He-py5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="gpp-MG-JHZ"/>
             </objects>
             <point key="canvasLocation" x="5956" y="115.59220389805098"/>
         </scene>
-        <!--View Controller-->
+        <!--Languages View Controller-->
         <scene sceneID="Esq-rH-Cxd">
             <objects>
-                <viewController id="s29-FX-W6e" sceneMemberID="viewController">
+                <viewController id="s29-FX-W6e" customClass="LanguagesViewController" customModule="Money_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nLX-Je-MLb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -748,18 +799,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Spanish"/>
+                                <connections>
+                                    <action selector="spanishButton:" destination="s29-FX-W6e" eventType="touchUpInside" id="XL6-XA-VKm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ze-S6-RaG">
                                 <rect key="frame" x="159" y="379" width="60" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="French"/>
+                                <connections>
+                                    <action selector="frenchButton:" destination="s29-FX-W6e" eventType="touchUpInside" id="U8C-k0-VSS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="557-ly-8f6">
                                 <rect key="frame" x="161" y="199" width="56" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Arabic"/>
+                                <connections>
+                                    <action selector="arabicButton:" destination="s29-FX-W6e" eventType="touchUpInside" id="bc6-L2-czR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvF-z2-pUc">
                                 <rect key="frame" x="48" y="50" width="278" height="95"/>
@@ -774,18 +834,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Chinese "/>
+                                <connections>
+                                    <action selector="chineseButton:" destination="s29-FX-W6e" eventType="touchUpInside" id="U3G-jx-aRK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqQ-AY-r6y">
                                 <rect key="frame" x="157" y="317" width="64" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="English"/>
+                                <connections>
+                                    <action selector="englishButton:" destination="s29-FX-W6e" eventType="touchUpInside" id="vKk-Gp-CvA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6z-mf-wg0">
                                 <rect key="frame" x="155" y="439" width="70" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="German"/>
+                                <connections>
+                                    <action selector="germanButton:" destination="s29-FX-W6e" eventType="touchUpInside" id="3ml-0y-emd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -797,15 +866,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I7b-fQ-KcY"/>
                     </view>
+                    <connections>
+                        <outlet property="arabicButton" destination="557-ly-8f6" id="may-OQ-5cP"/>
+                        <outlet property="chineseButton" destination="sdF-iv-kGS" id="cWq-hp-rqZ"/>
+                        <outlet property="englishButton" destination="NqQ-AY-r6y" id="Qf9-Eh-4yl"/>
+                        <outlet property="frenchButoon" destination="6ze-S6-RaG" id="UBv-Ns-Kap"/>
+                        <outlet property="germanButton" destination="S6z-mf-wg0" id="jbn-FB-WjO"/>
+                        <outlet property="languagesLabel" destination="vvF-z2-pUc" id="YXE-TO-2Bf"/>
+                        <outlet property="soanishButton" destination="aSn-Wx-SPk" id="CgA-qU-ycl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGq-dc-6b5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6717.6000000000004" y="137.18140929535232"/>
+            <point key="canvasLocation" x="6718" y="116"/>
         </scene>
-        <!--View Controller-->
+        <!--Terms And Conditions View Controller-->
         <scene sceneID="BnF-ZV-Hc0">
             <objects>
-                <viewController id="Iun-Zc-cMe" sceneMemberID="viewController">
+                <viewController id="Iun-Zc-cMe" customClass="TermsAndConditionsViewController" customModule="Money_App_2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SDe-NM-lZZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -813,14 +891,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="S50-gr-tyr">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIY-fk-8yL">
-                                <rect key="frame" x="9" y="30" width="356" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="41"/>
-                                <state key="normal" title="Terms &amp; Conditions">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="12" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY3-00-28H">
                                 <rect key="frame" x="0.0" y="240" width="375" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -838,6 +908,13 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terms And Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iq1-zo-gH7">
+                                <rect key="frame" x="0.0" y="65" width="375" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -848,15 +925,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bQg-j3-qsZ"/>
                     </view>
+                    <connections>
+                        <outlet property="termsAndConditionsLabel" destination="Iq1-zo-gH7" id="XfN-SX-omm"/>
+                        <outlet property="termsAndConditionsParagraphLabel" destination="vY3-00-28H" id="qRa-Qm-NWV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adr-zX-CGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6718" y="890"/>
+            <point key="canvasLocation" x="6717.6000000000004" y="889.20539730134942"/>
         </scene>
-        <!--View Controller-->
+        <!--My Profile View Controller-->
         <scene sceneID="8Ud-Gk-6bj">
             <objects>
-                <viewController id="khk-Xk-HBX" sceneMemberID="viewController">
+                <viewController id="khk-Xk-HBX" customClass="MyProfileViewController" customModule="Money_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ah-h5-rAh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -909,12 +990,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="17"/>
                                 <state key="normal" title="Credit/Debit Card"/>
+                                <connections>
+                                    <action selector="cardButtonPressed:" destination="khk-Xk-HBX" eventType="touchUpInside" id="9qT-Wb-QfW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdG-LW-s0j">
                                 <rect key="frame" x="225" y="328" width="33" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="17"/>
                                 <state key="normal" title="Cash"/>
+                                <connections>
+                                    <action selector="cashButtonPressed:" destination="khk-Xk-HBX" eventType="touchUpInside" id="ItR-YU-4C0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -930,6 +1017,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3zk-oF-9rQ"/>
                     </view>
+                    <connections>
+                        <outlet property="DOBTextField" destination="XVB-tJ-YQ9" id="SAI-Wi-yeE"/>
+                        <outlet property="cardButton" destination="99C-W3-fnf" id="3zO-GA-5g9"/>
+                        <outlet property="cashButton" destination="LdG-LW-s0j" id="h1c-Pz-wdc"/>
+                        <outlet property="myProfileLabel" destination="r4C-ud-iXa" id="y5c-1V-nJD"/>
+                        <outlet property="nameTextField" destination="lDj-V6-xiI" id="pJe-0T-IJk"/>
+                        <outlet property="totalAmountTextField" destination="gmh-H9-9wn" id="xDt-Ou-EFa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ek-8q-ZO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1061,10 +1156,10 @@
             </objects>
             <point key="canvasLocation" x="-52" y="904.49775112443785"/>
         </scene>
-        <!--View Controller-->
+        <!--Weekly Spending View Controller-->
         <scene sceneID="16D-Nq-n5V">
             <objects>
-                <viewController id="r6T-ad-zrQ" sceneMemberID="viewController">
+                <viewController id="r6T-ad-zrQ" customClass="WeeklySpendingViewController" customModule="Money_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OXD-xW-kqD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1078,19 +1173,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhm-Nc-Er0">
-                                <rect key="frame" x="166" y="635" width="43" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="bwg-3g-o8G"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="20"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="0eh-Ph-k9m" kind="show" id="qQh-Yy-f8S"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9X-43-aoD">
                                 <rect key="frame" x="116" y="278" width="142" height="47"/>
                                 <constraints>
@@ -1106,6 +1188,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhm-Nc-Er0">
+                                <rect key="frame" x="118" y="581" width="139" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="bwg-3g-o8G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="20"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="DoneButtonPressed:" destination="r6T-ad-zrQ" eventType="touchUpInside" id="V9t-rs-0ON"/>
+                                    <segue destination="0eh-Ph-k9m" kind="show" id="qQh-Yy-f8S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="XmG-wS-DPs" firstAttribute="top" secondItem="rK4-YP-7t8" secondAttribute="bottom" constant="-50" id="4wC-CH-ACV"/>
@@ -1124,15 +1220,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="glm-Cg-TbS"/>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="mhm-Nc-Er0" id="W9S-ct-UZh"/>
+                        <outlet property="enterTotalLabel" destination="V9X-43-aoD" id="J8R-5W-PUe"/>
+                        <outlet property="enterTotalTextField" destination="ncx-Ml-ZCh" id="Xh6-iv-m1k"/>
+                        <outlet property="weeklySpendingsLabel" destination="rK4-YP-7t8" id="Z0e-kr-GDs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fyb-xU-adG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="906"/>
+            <point key="canvasLocation" x="1056.8" y="905.3973013493254"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Screen View Controller-->
         <scene sceneID="YGs-7W-LpM">
             <objects>
-                <viewController id="y9h-QD-xw6" sceneMemberID="viewController">
+                <viewController id="y9h-QD-xw6" customClass="MainScreenViewController" customModule="Money_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RaT-u5-pnE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1154,21 +1256,33 @@
                                         <rect key="frame" x="18" y="15" width="349" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="Group 5"/>
+                                        <connections>
+                                            <action selector="faceButtonPressed:" destination="y9h-QD-xw6" eventType="touchUpInside" id="Q1x-K0-pn9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJj-6u-r88">
                                         <rect key="frame" x="87" y="157" width="50" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="sign up"/>
+                                        <connections>
+                                            <action selector="signUpButtonPressed:" destination="y9h-QD-xw6" eventType="touchUpInside" id="lhQ-Ub-ozx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hq-4K-D3e">
                                         <rect key="frame" x="214" y="161" width="95" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="LOGIN"/>
+                                        <connections>
+                                            <action selector="LoginButtonPressed:" destination="y9h-QD-xw6" eventType="touchUpInside" id="cu1-Qn-Ad7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCY-4s-NJn">
                                         <rect key="frame" x="18" y="83" width="398" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="Group 4"/>
+                                        <connections>
+                                            <action selector="googleButtonPressed:" destination="y9h-QD-xw6" eventType="touchUpInside" id="fUh-vM-vBG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1201,6 +1315,15 @@
                         <viewLayoutGuide key="safeArea" id="EH2-9g-a7v"/>
                     </view>
                     <navigationItem key="navigationItem" id="0mM-XC-5YO"/>
+                    <connections>
+                        <outlet property="LoginButton" destination="7Hq-4K-D3e" id="AmC-Wj-3gX"/>
+                        <outlet property="appLogo" destination="HEl-3R-Rm1" id="eWX-UN-exC"/>
+                        <outlet property="catchyPhraseLabel" destination="k2d-jj-85C" id="3Ve-Cq-5lz"/>
+                        <outlet property="faceButton" destination="d2x-Eo-Fme" id="Msh-NF-Lz9"/>
+                        <outlet property="googleButton" destination="aCY-4s-NJn" id="7bG-Pb-t6R"/>
+                        <outlet property="piggyCashLabel" destination="JVH-Ml-zfh" id="9qH-YN-iXM"/>
+                        <outlet property="signUpButton" destination="NJj-6u-r88" id="Db1-LK-xuI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ft1-eF-2qQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1233,7 +1356,7 @@
         <image name="piggy" width="66" height="95"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uWP-tm-eWe"/>
-        <segue reference="QIn-Lf-vN8"/>
+        <segue reference="qQh-Yy-f8S"/>
+        <segue reference="XF1-dF-O5u"/>
     </inferredMetricsTieBreakers>
 </document>

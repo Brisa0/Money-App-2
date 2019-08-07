@@ -25,7 +25,7 @@ class CashTotalViewController: UIViewController {
     //This is a Text Field Outlet. This is where the user will enter their weekly spending amount limit.
     @IBOutlet weak var weeklySpendingAmountTextField: UITextField!
     
-    //This is the Done Button Outlet. The user will press this once they have followed all instructions of the screen.
+    //This is the Done Button Outlet. The user will press this once they have followed all instructions on the screen.
     @IBOutlet weak var doneButton: UIButton!
     
     
@@ -40,7 +40,9 @@ class CashTotalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    //This is the Done Button action. The user will press this once they have followed all instructions on the screen.
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+    }
     
 
 }
